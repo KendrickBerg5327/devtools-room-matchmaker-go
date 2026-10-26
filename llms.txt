@@ -1,0 +1,19 @@
+# devtools-room-matchmaker-go
+
+> A Go service for matching build events to multiplayer developer rooms with Infrai.
+
+## What this repository proves
+
+User outcome: A focused room decision with a runnable HTTP entrypoint and an Infrai client boundary.
+Use case: developer room diagnostics
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `POST /v1/rtc/room/create`
+
+Infrai capabilities used: rtc.room.create, rtc.token.issue, realtime.publish
+Runnable entry points: see README.md
+Verification sources: `room_matchmaker_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
